@@ -1,6 +1,6 @@
 {
     "name": "eslint-config-smartprocure",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "SmartProcure's ESLint configuration",
     "scripts": {
         "lint": "eslint .",
@@ -13,10 +13,10 @@
         "url": "https://github.com/smartprocure/eslint-config-smartprocure.git"
     },
     "peerDependencies": {
-        "eslint": "^2.7.0"
+        "eslint": "^3.15.0"
     },
     "devDependencies": {
-        "eslint": "2.7.0",
+        "eslint": "3.15.0",
         "mocha": "3.0.0"
     }
 }
