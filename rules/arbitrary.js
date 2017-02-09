@@ -4,6 +4,7 @@
 
 module.exports = {
     rules: {
+        'no-console':            1,
         'no-param-reassign':     1,
         'no-proto':              2,
         'no-return-assign':      [2, 'except-parens'],
