@@ -13,10 +13,10 @@
         "url": "https://github.com/smartprocure/eslint-config-smartprocure.git"
     },
     "peerDependencies": {
-        "eslint": "^3.15.0"
+        "eslint": "^3.7.1"
     },
     "devDependencies": {
-        "eslint": "3.15.0",
+        "eslint": "3.7.1",
         "mocha": "3.0.0"
     }
 }
