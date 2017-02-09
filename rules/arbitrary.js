@@ -11,7 +11,6 @@ module.exports = {
         'no-self-compare':       2,
         'no-unused-expressions': 2,
         'no-useless-call':       2,
-        yoda:                    [2, 'never', { exceptRange: true }],
-        'comma-dangle':          [2, 'only-multiline']
+        yoda:                    [2, 'never', { exceptRange: true }]
     }
 };
