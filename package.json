@@ -1,22 +1,23 @@
 {
-    "name": "eslint-config-smartprocure",
-    "version": "0.0.2",
-    "description": "SmartProcure's ESLint configuration",
-    "scripts": {
-        "lint": "eslint .",
-        "test": "npm run lint && mocha test"
-    },
-    "main": "index.js",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/smartprocure/eslint-config-smartprocure.git"
-    },
-    "peerDependencies": {
-        "eslint": "^3.15.0"
-    },
-    "devDependencies": {
-        "eslint": "3.15.0",
-        "mocha": "3.0.0"
-    }
+  "name": "eslint-config-smartprocure",
+  "version": "0.0.2",
+  "description": "SmartProcure's ESLint configuration",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint && mocha test"
+  },
+  "main": "index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smartprocure/eslint-config-smartprocure.git"
+  },
+  "peerDependencies": {
+    "eslint": "^3.15.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.15.0",
+    "eslint-plugin-mocha": "^4.8.0",
+    "mocha": "3.0.0"
+  }
 }
