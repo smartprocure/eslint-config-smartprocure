@@ -9,12 +9,6 @@ module.exports = {
         'comma-spacing':               2,
         'comma-style':                 2,
         indent:                        [ 2, 4, { SwitchCase: 1 } ],
-        // Disabling for https://github.com/eslint/eslint/issues/3453
-        // 'key-spacing': [ 1, {
-        //     align:        'value',
-        //     beforeColon:  false,
-        //     afterColon:   true
-        // } ],
         'linebreak-style':             2,
         'new-parens':                  2,
         'no-array-constructor':        2,
