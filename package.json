@@ -1,6 +1,6 @@
 {
     "name": "eslint-config-smartprocure",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "SmartProcure's ESLint configuration",
     "scripts": {
         "lint": "eslint .",
