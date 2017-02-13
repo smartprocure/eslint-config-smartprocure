@@ -39,11 +39,11 @@ module.exports = {
         'lodash-fp/consistent-compose':              'error',
         'lodash-fp/consistent-name':                 [ 'error', '_' ],
         'lodash-fp/no-argumentless-calls':           'error',
-        'lodash-fp/no-chain':                        'error',
+        'lodash-fp/no-chain':                        'warn',
         'lodash-fp/no-extraneous-args':              'error',
-        'lodash-fp/no-extraneous-function-wrapping': 'error',
+        'lodash-fp/no-extraneous-function-wrapping': 'warn',
         'lodash-fp/no-extraneous-iteratee-args':     'error',
-        'lodash-fp/no-for-each':                     'error',
+        'lodash-fp/no-for-each':                     'warn',
         'lodash-fp/no-partial-of-curried':           'error',
         'lodash-fp/no-single-composition':           'error',
         'lodash-fp/no-submodule-destructuring':      'error',
@@ -51,17 +51,17 @@ module.exports = {
         'lodash-fp/prefer-compact':                  'error',
         'lodash-fp/prefer-composition-grouping':     'error',
         'lodash-fp/prefer-constant': [
-            'error', {
-                arrowFunctions:                        false
+            'warn', {
+                arrowFunctions:                      false
             }
         ],
         'lodash-fp/prefer-flat-map':                 'error',
-        'lodash-fp/prefer-get':                      'error',
+        'lodash-fp/prefer-get':                      'warn',
         'lodash-fp/prefer-identity': [
-            'error', {
-                arrowFunctions:                        false
+            'warn', {
+                arrowFunctions:                      false
             }
         ],
-        'lodash-fp/use-fp':                          'error'
+        'lodash-fp/use-fp':                          'warn'
     }
 };
