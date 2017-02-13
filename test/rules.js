@@ -1,28 +1,30 @@
 'use strict';
 
-var arbitrary     = require('../rules/arbitrary'),
-    bestPractices = require('../rules/bestPractices'),
-    style         = require('../rules/style'),
-    variables     = require('../rules/variables');
+const _ = require('lodash/fp');
 
 describe('Rules', function() {
     it('does not duplicate rules between rules files', function() {
-        var files = {
-            'arbitrary.js':     arbitrary,
-            'bestPractices.js': bestPractices,
-            'style.js':         style,
-            'variables.js':     variables
-        };
+        const files = _.mergeAll(..._.map(name => {
+            if (!name) return {};
+            const o = {};
+            o[name] = require('../rules/' + name);
+            return o;
+        }, [
+            null, 'arbitrary', 'bestPractices', 'style', 'variables'
+        ]));
 
-        var allRules = {};
+        const rules = _.flatMap(o => _.keys(o.rules), _.values(files));
 
-        Object.keys(files).forEach(function(file) {
-            Object.keys(files[file].rules).forEach(function(ruleName) {
-                if (ruleName in allRules)
-                    throw new Error('Found ' + ruleName + ' in ' + file + ', but ' + ruleName + ' already exists in ' + allRules[ruleName]);
+        const repeated = _.flow(
+            _.groupBy(e => e),
+            _.filter(e => e.length > 1),
+            _.flatten,
+            _.uniq
+        );
 
-                allRules[ruleName] = file;
-            });
-        });
+        const repeatedRules = repeated(rules);
+
+        if (repeatedRules.length)
+            throw 'Duplicated rules: ' + repeatedRules;
     });
 });
