@@ -25,43 +25,44 @@ module.exports = {
     },
     rules: {
         // Mocha plugin
-        'mocha/no-exclusive-tests':                  'error',
-        'mocha/no-skipped-tests':                    'error',
-        'mocha/handle-done-callback':                'error',
-        'mocha/no-global-tests':                     'error',
-        'mocha/no-return-and-callback':              'error',
-        'mocha/valid-suite-description':             'error',
-        'mocha/no-sibling-hooks':                    'error',
-        'mocha/no-identical-title':                  'warn',
+        'mocha/no-exclusive-tests':                  2,
+        'mocha/no-skipped-tests':                    2,
+        'mocha/handle-done-callback':                2,
+        'mocha/no-global-tests':                     2,
+        'mocha/no-return-and-callback':              2,
+        'mocha/valid-suite-description':             2,
+        'mocha/no-sibling-hooks':                    2,
+        'mocha/no-identical-title':                  1,
         // Because of fn().should.be.true and so on
         'no-unused-expressions':                     0,
         // Lodash
-        'lodash-fp/consistent-compose':              'error',
-        'lodash-fp/consistent-name':                 [ 'error', '_' ],
-        'lodash-fp/no-argumentless-calls':           'error',
-        'lodash-fp/no-chain':                        'warn',
-        'lodash-fp/no-extraneous-args':              'error',
-        'lodash-fp/no-extraneous-function-wrapping': 'warn',
-        'lodash-fp/no-extraneous-iteratee-args':     'error',
-        'lodash-fp/no-for-each':                     'warn',
-        'lodash-fp/no-partial-of-curried':           'error',
-        'lodash-fp/no-single-composition':           'error',
-        'lodash-fp/no-submodule-destructuring':      'error',
-        'lodash-fp/no-unused-result':                'error',
-        'lodash-fp/prefer-compact':                  'error',
-        'lodash-fp/prefer-composition-grouping':     'error',
+        'lodash-fp/consistent-compose':              2,
+        'lodash-fp/consistent-name':                 [ 2, '_' ],
+        'lodash-fp/no-argumentless-calls':           2,
+        'lodash-fp/no-chain':                        1,
+        'lodash-fp/no-extraneous-args':              2,
+        'lodash-fp/no-extraneous-function-wrapping': 1,
+        'lodash-fp/no-extraneous-iteratee-args':     2,
+        'lodash-fp/no-for-each':                     1,
+        'lodash-fp/no-partial-of-curried':           2,
+        'lodash-fp/no-single-composition':           2,
+        'lodash-fp/no-submodule-destructuring':      2,
+        'lodash-fp/no-unused-result':                2,
+        'lodash-fp/prefer-compact':                  2,
+        'lodash-fp/prefer-composition-grouping':     2,
         'lodash-fp/prefer-constant': [
-            'warn', {
+            1, {
                 arrowFunctions:                      false
             }
         ],
-        'lodash-fp/prefer-flat-map':                 'error',
-        'lodash-fp/prefer-get':                      'warn',
+        'lodash-fp/prefer-flat-map':                 2,
+        'lodash-fp/prefer-get':                      1,
         'lodash-fp/prefer-identity': [
-            'warn', {
+            1, {
                 arrowFunctions:                      false
             }
         ],
-        'lodash-fp/use-fp':                          'warn'
+        // 'lodash-fp/preferred-alias':                 2,
+        'lodash-fp/use-fp':                          1
     }
 };
