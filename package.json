@@ -1,10 +1,9 @@
 {
   "name": "eslint-config-smartprocure",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "SmartProcure's ESLint configuration",
   "scripts": {
-    "lint": "eslint .",
-    "test": "npm run lint && mocha test"
+    "lint": "eslint ."
   },
   "main": "index.js",
   "license": "MIT",
@@ -13,16 +12,17 @@
     "url": "https://github.com/smartprocure/eslint-config-smartprocure.git"
   },
   "peerDependencies": {
-    "eslint": "^3.7.1"
+    "eslint": "^4.5.0"
   },
   "devDependencies": {
-    "eslint": "3.15.0",
-    "lodash": "^4.17.4",
-    "mocha": "3.2.0"
+    "eslint": "4.5.0"
   },
   "dependencies": {
-    "eslint-plugin-lodash": "^2.3.5",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jest": "^20.0.3",
+    "eslint-plugin-lodash": "^2.4.5",
     "eslint-plugin-lodash-fp": "^2.1.3",
-    "eslint-plugin-mocha": "^4.8.0"
+    "eslint-plugin-mocha": "^4.11.0",
+    "eslint-plugin-react": "^7.3.0"
   }
 }

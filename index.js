@@ -1,68 +1,81 @@
-'use strict';
+let eslintBuiltinRules = {
+  eqeqeq: ['warn', 'always'],
+  'arrow-body-style': ['error', 'as-needed'],
+  'prefer-spread': 'warn',
+  'prefer-rest-params': 'warn',
+  'prefer-template': 'error',
+  'no-duplicate-imports': 'error',
+  'wrap-iife': 'error',
+  'no-console': 'warn',
+  'no-unneeded-ternary': 'error',
+  'require-await': 'error',
+  'one-var': ['error', 'never'],
+  'no-empty-function': 'error',
+  'no-implicit-coercion': ['error', { allow: ['!!', '~'] }],
+  'no-return-assign': 'error',
+  'no-return-await': 'error',
+}
+
+let reactRules = {
+  'react/prefer-stateless-function': 'error',
+  'react/jsx-uses-vars': 'error',
+  'react/jsx-uses-react': 'error',
+  'react/react-in-jsx-scope': 'error',
+  'react/self-closing-comp': 'error',
+  'react/void-dom-elements-no-children': 'error',
+}
+
+let lodashFpRules = {
+  'lodash-fp/use-fp': 'error',
+  'lodash-fp/no-for-each': 'error',
+  'lodash-fp/no-argumentless-calls': 'error',
+  'lodash-fp/no-unused-result': 'error',
+  'lodash-fp/prefer-flat-map': 'error',
+  'lodash-fp/no-extraneous-iteratee-args': 'error',
+  'lodash-fp/no-single-composition': 'error',
+}
+
+let lodashRules = {
+  'lodash/prop-shorthand': ['error', 'always'],
+  'lodash/prefer-reject': 'error',
+}
+
+let importRules = {
+  'import/no-unresolved': ['error', { commonjs: true }],
+}
+
+let mochaRules = {
+  'mocha/no-exclusive-tests': 'error',
+  'mocha/no-pending-tests': 'error',
+  'mocha/no-skipped-tests': 'error',
+}
+
+let jestRules = {
+  'jest/no-disabled-tests': 'error',
+  'jest/no-focused-tests': 'error',
+  'jest/no-identical-title': 'error',
+  'jest/valid-expect': 'error',
+}
 
 module.exports = {
-    'extends': [
-        'eslint:recommended'
-    ].concat([
-        './rules/arbitrary',
-        './rules/bestPractices',
-        './rules/style',
-        './rules/variables'
-    ].map(require.resolve)),
-    plugins: [
-        'mocha',
-        'lodash-fp'
-    ],
-    parserOptions: {
-        ecmaVersion: 7,
-    },
-    env: {
-        amd:     true,
-        browser: true,
-        es6:     true,
-        node:    true,
-        mocha:   true
-    },
-    rules: {
-        // Mocha plugin
-        'mocha/no-exclusive-tests':                  2,
-        'mocha/no-skipped-tests':                    2,
-        'mocha/handle-done-callback':                2,
-        'mocha/no-global-tests':                     2,
-        'mocha/no-return-and-callback':              2,
-        'mocha/valid-suite-description':             2,
-        'mocha/no-sibling-hooks':                    2,
-        'mocha/no-identical-title':                  1,
-        // Because of fn().should.be.true and so on
-        'no-unused-expressions':                     0,
-        // Lodash
-        'lodash-fp/consistent-compose':              2,
-        'lodash-fp/consistent-name':                 [ 2, '_' ],
-        'lodash-fp/no-argumentless-calls':           2,
-        'lodash-fp/no-chain':                        1,
-        'lodash-fp/no-extraneous-args':              2,
-        'lodash-fp/no-extraneous-function-wrapping': 1,
-        'lodash-fp/no-extraneous-iteratee-args':     2,
-        'lodash-fp/no-for-each':                     1,
-        'lodash-fp/no-partial-of-curried':           2,
-        'lodash-fp/no-single-composition':           2,
-        'lodash-fp/no-submodule-destructuring':      2,
-        'lodash-fp/no-unused-result':                2,
-        'lodash-fp/prefer-compact':                  2,
-        'lodash-fp/prefer-composition-grouping':     2,
-        'lodash-fp/prefer-constant': [
-            1, {
-                arrowFunctions:                      false
-            }
-        ],
-        'lodash-fp/prefer-flat-map':                 2,
-        'lodash-fp/prefer-get':                      1,
-        'lodash-fp/prefer-identity': [
-            1, {
-                arrowFunctions:                      false
-            }
-        ],
-        // 'lodash-fp/preferred-alias':                 2,
-        'lodash-fp/use-fp':                          1
-    }
-};
+  extends: ['eslint:recommended'],
+  plugins: ['react', 'lodash', 'lodash-fp', 'import', 'mocha', 'jest'],
+  parserOptions: {
+    ecmaVersion: 7,
+  },
+  env: {
+    browser: true,
+    es6: true,
+    node: true,
+  },
+  rules: Object.assign(
+    {},
+    eslintBuiltinRules,
+    reactRules,
+    lodashFpRules,
+    lodashRules,
+    importRules,
+    mochaRules,
+    jestRules
+  ),
+}
