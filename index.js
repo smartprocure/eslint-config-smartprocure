@@ -1,7 +1,7 @@
 let eslintBuiltinRules = {
   eqeqeq: ['warn', 'always'],
   'arrow-body-style': ['error', 'as-needed'],
-  'prefer-spread': 'warn',
+  'prefer-spread': 'error',
   'prefer-rest-params': 'warn',
   'prefer-template': 'error',
   'no-duplicate-imports': 'error',
