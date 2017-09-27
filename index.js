@@ -1,3 +1,5 @@
+let _ = require('lodash/fp')
+
 let eslintBuiltinRules = {
   eqeqeq: ['warn', 'always'],
   'arrow-body-style': ['error', 'as-needed'],
@@ -45,6 +47,7 @@ let lodashFpRules = {
 let lodashRules = {
   'lodash/prop-shorthand': ['error', 'always'],
   'lodash/prefer-reject': 'error',
+  'lodash/prefer-lodash-method': 1,
 }
 
 let importRules = {
@@ -81,8 +84,7 @@ module.exports = {
     es6: true,
     node: true,
   },
-  rules: Object.assign(
-    {},
+  rules: _.extend(
     eslintBuiltinRules,
     reactRules,
     lodashFpRules,
