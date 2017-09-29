@@ -16,6 +16,7 @@ let eslintBuiltinRules = {
   'no-implicit-coercion': ['error', { allow: ['!!', '~'] }],
   'no-return-assign': 'error',
   'no-return-await': 'error',
+  'no-unused-vars': ['error', { args: 'none' }],
 }
 
 let reactRules = {
