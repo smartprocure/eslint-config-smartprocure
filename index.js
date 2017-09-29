@@ -10,7 +10,6 @@ let eslintBuiltinRules = {
   'wrap-iife': 'error',
   'no-console': 'warn',
   'no-unneeded-ternary': 'error',
-  'require-await': 'error',
   'one-var': ['error', 'never'],
   'no-empty-function': 'error',
   'no-implicit-coercion': ['error', { allow: ['!!', '~'] }],
