@@ -8,7 +8,7 @@ let eslintBuiltinRules = {
   'prefer-template': 'error',
   'no-duplicate-imports': 'error',
   'wrap-iife': 'error',
-  'no-console': ['warn', { allow: ['warn', 'error'] }],
+  'no-console': ['warn', { allow: ['warn', 'error', 'info'] }],
   'no-unneeded-ternary': 'error',
   'one-var': ['error', 'never'],
   'no-empty': 'off',
