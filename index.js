@@ -12,7 +12,6 @@ let eslintBuiltinRules = {
   'no-unneeded-ternary': 'error',
   'require-await': 'error',
   'one-var': ['error', 'never'],
-  'no-empty-function': 'off',
   'no-empty': 'off',
   'no-implicit-coercion': ['error', { allow: ['!!', '~'] }],
   'no-return-assign': 'error',
