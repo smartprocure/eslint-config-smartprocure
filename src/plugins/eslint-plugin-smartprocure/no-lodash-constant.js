@@ -21,7 +21,7 @@ module.exports = {
         ctx.report({
           node,
           message: 'Do not use _.constant',
-          fix: fixer => [fixer.replaceText(node, `() => ${argRaw}`)],
+          fix: fixer => fixer.replaceText(node, `() => ${argRaw}`),
         })
       }
     },
