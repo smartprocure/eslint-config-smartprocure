@@ -4,7 +4,8 @@
   "description": "SmartProcure's ESLint configuration",
   "scripts": {
     "lint": "eslint .",
-    "lint:ci": "npm run lint"
+    "lint:ci": "npm run lint",
+    "test": "jest"
   },
   "main": "index.js",
   "license": "MIT",
@@ -16,7 +17,8 @@
     "eslint": "^4.5.0"
   },
   "devDependencies": {
-    "eslint": "^4.5.0"
+    "eslint": "^4.5.0",
+    "jest": "^21.2.1"
   },
   "dependencies": {
     "eslint-plugin-import": "^2.7.0",
