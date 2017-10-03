@@ -11,27 +11,33 @@ RuleTester.setDefaultConfig({
 
 let ruleTester = new RuleTester()
 
-let VALID_CODE = [
-  `let thing = () => { return ''; }`,
-  `let thing = () => ''`,
-  `let thing = function() { return ''; }`,
-  `function thing() { return ''; }`,
+let validCode = [
+  `() => { return ''; }`,
+  `() => ''`,
+  `(function() { return ''; })`,
+  `function foo() { return ''; }`,
 ]
-let INVALID_CODE = [
-  `var bob = _.constant('')`,
-  `let bob = _.constant(1)`,
-  `const bob = _.constant(true)`,
-  `let bob = _.constant({})`,
+let invalidCode = [
+  { input: `_.constant('')`, output: `() => ''` },
+  { input: `_.constant('{}')`, output: `() => '{}'` },
+  { input: `_.constant(1)`, output: `() => 1` },
+  { input: `_.constant(true)`, output: `() => true` },
+  { input: `_.constant({})`, output: `() => ({})` },
+  {
+    input: `var foo = {}; _.constant(foo)`,
+    output: `var foo = {}; () => foo`,
+  },
 ]
 
 ruleTester.run('no-lodash-constant', rule, {
-  valid: VALID_CODE.map(code => ({ code })),
-  invalid: INVALID_CODE.map(code => ({
-    code,
+  valid: validCode.map(code => ({ code })),
+  invalid: invalidCode.map(({ input, output }) => ({
+    code: input,
     errors: [
       {
         message: 'Do not use _.constant',
       },
     ],
+    output,
   })),
 })
