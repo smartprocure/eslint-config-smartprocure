@@ -15,6 +15,7 @@ let eslintBuiltinRules = {
   'no-implicit-coercion': ['error', { allow: ['!!', '~'] }],
   'no-return-assign': 'error',
   'no-return-await': 'error',
+  'object-shorthand': ['error', 'always', { avoidExplicitReturnArrows: true }],
 }
 
 let reactRules = {
