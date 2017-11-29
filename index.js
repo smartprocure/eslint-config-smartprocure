@@ -84,6 +84,9 @@ module.exports = {
     es6: true,
     node: true,
   },
+  globals: {
+    sails: true
+  },
   rules: _.extend(
     eslintBuiltinRules,
     reactRules,
