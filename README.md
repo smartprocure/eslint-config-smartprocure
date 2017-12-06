@@ -1,16 +1,12 @@
-﻿# eslint-config-smartprocure [![Build Status](https://travis-ci.org/smartprocure/eslint-config-smartprocure.svg?branch=master)](https://travis-ci.org/smartprocure/eslint-config-smartprocure)
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/smartprocure/eslint-config-smartprocure.svg)](https://greenkeeper.io/)
+# eslint-config-smartprocure [![CircleCI](https://img.shields.io/circleci/project/github/smartprocure/eslint-config-smartprocure.svg)]()
 
 > ESLint [shareable config](http://eslint.org/docs/developer-guide/shareable-configs.html) for the SmartProcure JavaScript style guide
-
 
 ## Installation
 
 ```
 $ npm install --save-dev eslint eslint-config-smartprocure
 ```
-
 
 ## Usage
 
@@ -24,23 +20,6 @@ Once the `eslint-config-smartprocure` package is installed, you can use it by sp
   }
 }
 ```
-
-### Using the `smartprocure` config with `eslint:recommended`
-
-There are several rules in the [`eslint:recommended` ruleset](http://eslint.org/docs/rules/) that SmartProcure style is not opinionated about that you might want to enforce in your project.
-
-To use SmartProcure style in conjunction with ESLint's recommended rule set, extend them both, making sure to list `smartprocure` last:
-
-```js
-{
-  "extends": ["eslint:recommended", "smartprocure"],
-  "rules": {
-    // Additional, per-project rules...
-  }
-}
-```
-
-To see how the `smartprocure` config compares with `eslint:recommended`, refer to the [source code of `index.js`](https://github.com/smartprocure/eslint-config-smartprocure/blob/master/index.js), which lists every ESLint rule along with whether (and how) it is enforced by the `smartprocure` config.
 
 ## License
 

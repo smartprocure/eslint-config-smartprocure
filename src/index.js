@@ -18,6 +18,10 @@ let eslintBuiltinRules = {
   'object-shorthand': ['error', 'always', { avoidExplicitReturnArrows: true }],
 }
 
+let customRules = {
+  'smartprocure/no-lodash-constant': 'error',
+}
+
 let reactRules = {
   'react/prefer-stateless-function': 'error',
   'react/jsx-uses-vars': 'error',
@@ -75,7 +79,15 @@ let jestRules = {
 
 module.exports = {
   extends: ['eslint:recommended'],
-  plugins: ['react', 'lodash', 'lodash-fp', 'import', 'mocha', 'jest'],
+  plugins: [
+    'react',
+    'lodash',
+    'lodash-fp',
+    'import',
+    'mocha',
+    'jest',
+    'smartprocure',
+  ],
   parserOptions: {
     ecmaVersion: 7,
   },
@@ -86,6 +98,7 @@ module.exports = {
   },
   rules: _.extend(
     eslintBuiltinRules,
+    customRules,
     reactRules,
     lodashFpRules,
     lodashRules,
