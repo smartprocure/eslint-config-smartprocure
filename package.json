@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-smartprocure",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "SmartProcure's ESLint configuration",
   "scripts": {
     "lint": "eslint .",
@@ -11,9 +11,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/smartprocure/eslint-config-smartprocure.git"
-  },
-  "peerDependencies": {
-    "eslint": "^4.5.0"
   },
   "devDependencies": {
     "eslint": "^4.5.0"
