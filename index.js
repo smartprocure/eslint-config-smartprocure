@@ -84,13 +84,13 @@ module.exports = {
     es6: true,
     node: true,
   },
-  rules: _.extendAll(
+  rules: _.extendAll([
     eslintBuiltinRules,
     reactRules,
     lodashFpRules,
     lodashRules,
     importRules,
     mochaRules,
-    jestRules
-  ),
+    jestRules,
+  ]),
 }
