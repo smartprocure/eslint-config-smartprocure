@@ -84,7 +84,7 @@ module.exports = {
     es6: true,
     node: true,
   },
-  rules: _.extend(
+  rules: _.extendAll(
     eslintBuiltinRules,
     reactRules,
     lodashFpRules,
