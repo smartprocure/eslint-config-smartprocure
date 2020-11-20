@@ -42,6 +42,7 @@ let lodashFpRules = {
   'lodash-fp/prefer-composition-grouping': 'error',
   'lodash-fp/prefer-constant': ['warn', { arrowFunctions: false }],
   'lodash-fp/prefer-get': 'warn',
+  'lodash-fp/consistent-compose': ['error', 'flow'],
 }
 
 let lodashRules = {
