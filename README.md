@@ -1,6 +1,4 @@
-﻿# eslint-config-smartprocure [![Build Status](https://travis-ci.org/smartprocure/eslint-config-smartprocure.svg?branch=master)](https://travis-ci.org/smartprocure/eslint-config-smartprocure)
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/smartprocure/eslint-config-smartprocure.svg)](https://greenkeeper.io/)
+# eslint-config-smartprocure
 
 > ESLint [shareable config](http://eslint.org/docs/developer-guide/shareable-configs.html) for the SmartProcure JavaScript style guide
 

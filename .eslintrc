@@ -1,4 +1,4 @@
 {
-  "extends": "./index.js",
+  "extends": [ "eslint:recommended", "standard", "./index.js"],
   "plugins": ["smartprocure"]
 }

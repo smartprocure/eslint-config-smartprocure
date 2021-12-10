@@ -1,6 +1,10 @@
-let _ = require('lodash/fp')
+const _ = require('lodash/fp')
 
-let eslintBuiltinRules = {
+const eslintBuiltinRules = {
+  semi: ['error', 'never'],
+  quotes: ['error', 'single'],
+  'prefer-const': 'off',
+  'arrow-parens': ['error', 'as-needed'],
   eqeqeq: ['warn', 'always'],
   'arrow-body-style': ['error', 'as-needed'],
   'prefer-spread': 'error',
@@ -15,19 +19,10 @@ let eslintBuiltinRules = {
   'no-implicit-coercion': ['error', { allow: ['!!', '~'] }],
   'no-return-assign': 'error',
   'no-return-await': 'error',
-  'object-shorthand': ['error', 'always', { avoidExplicitReturnArrows: true }],
+  'object-shorthand': ['error', 'always', { avoidExplicitReturnArrows: true }]
 }
 
-let reactRules = {
-  'react/prefer-stateless-function': 'error',
-  'react/jsx-uses-vars': 'error',
-  'react/jsx-uses-react': 'error',
-  'react/react-in-jsx-scope': 'error',
-  'react/self-closing-comp': 'error',
-  'react/void-dom-elements-no-children': 'error',
-}
-
-let lodashFpRules = {
+const lodashFpRules = {
   'lodash-fp/use-fp': 'error',
   'lodash-fp/no-for-each': 'error',
   'lodash-fp/no-argumentless-calls': 'error',
@@ -41,56 +36,43 @@ let lodashFpRules = {
   'lodash-fp/no-submodule-destructuring': 'error',
   'lodash-fp/prefer-composition-grouping': 'error',
   'lodash-fp/prefer-constant': ['warn', { arrowFunctions: false }],
-  'lodash-fp/prefer-get': 'warn',
+  'lodash-fp/prefer-get': 'warn'
 }
 
-let lodashRules = {
+const lodashRules = {
   'lodash/prop-shorthand': ['error', 'always'],
   'lodash/prefer-reject': 'error',
-  'lodash/prefer-lodash-method': 1,
+  'lodash/prefer-lodash-method': 1
 }
 
-let importRules = {
-  'import/no-unresolved': ['error', { commonjs: true }],
+const importRules = {
+  'import/no-unresolved': ['error', { commonjs: true }]
 }
 
-let mochaRules = {
-  'mocha/no-exclusive-tests': 'error',
-  'mocha/no-pending-tests': 'error',
-  'mocha/no-skipped-tests': 'error',
-  'mocha/handle-done-callback': 'error',
-  'mocha/no-global-tests': 'error',
-  'mocha/no-return-and-callback': 'error',
-  'mocha/valid-suite-description': 'error',
-  'mocha/no-sibling-hooks': 'error',
-  'mocha/no-identical-title': 'error',
-}
-
-let jestRules = {
+const jestRules = {
   'jest/no-disabled-tests': 'error',
   'jest/no-focused-tests': 'error',
   'jest/no-identical-title': 'error',
-  'jest/valid-expect': 'error',
+  'jest/valid-expect': 'error'
 }
 
 module.exports = {
   extends: ['eslint:recommended'],
-  plugins: ['react', 'lodash', 'lodash-fp', 'import', 'mocha', 'jest'],
+  plugins: ['lodash', 'lodash-fp', 'import', 'jest'],
   parserOptions: {
-    ecmaVersion: 7,
+    ecmaVersion: 7
   },
   env: {
     browser: true,
     es6: true,
     node: true,
+    jest: true
   },
   rules: _.extendAll([
     eslintBuiltinRules,
-    reactRules,
     lodashFpRules,
     lodashRules,
     importRules,
-    mochaRules,
-    jestRules,
-  ]),
+    jestRules
+  ])
 }
