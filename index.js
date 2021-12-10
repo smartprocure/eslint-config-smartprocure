@@ -1,6 +1,6 @@
-const _ = require('lodash/fp')
+let _ = require('lodash/fp')
 
-const eslintBuiltinRules = {
+let eslintBuiltinRules = {
   semi: ['error', 'never'],
   quotes: ['error', 'single'],
   'prefer-const': 'off',
@@ -22,7 +22,7 @@ const eslintBuiltinRules = {
   'object-shorthand': ['error', 'always', { avoidExplicitReturnArrows: true }]
 }
 
-const lodashFpRules = {
+let lodashFpRules = {
   'lodash-fp/use-fp': 'error',
   'lodash-fp/no-for-each': 'error',
   'lodash-fp/no-argumentless-calls': 'error',
@@ -39,17 +39,17 @@ const lodashFpRules = {
   'lodash-fp/prefer-get': 'warn'
 }
 
-const lodashRules = {
+let lodashRules = {
   'lodash/prop-shorthand': ['error', 'always'],
   'lodash/prefer-reject': 'error',
   'lodash/prefer-lodash-method': 1
 }
 
-const importRules = {
+let importRules = {
   'import/no-unresolved': ['error', { commonjs: true }]
 }
 
-const jestRules = {
+let jestRules = {
   'jest/no-disabled-tests': 'error',
   'jest/no-focused-tests': 'error',
   'jest/no-identical-title': 'error',
