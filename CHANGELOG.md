@@ -1,3 +1,8 @@
+# 3.0.2
+
+* Update badges in README.
+* Bump version of eslint-plugin-smartprocure.
+
 # 3.0.1
 
 * Add build badge status to README.
