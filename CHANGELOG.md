@@ -1,3 +1,8 @@
+# 3.0.1
+
+* Add build badge status to README.
+* Bump version on eslint-plugin-smartprocure
+
 # 3.0.0
 
 * Bump all dependencies to the latest version.
