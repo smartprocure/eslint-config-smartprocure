@@ -1,4 +1,4 @@
-# eslint-config-smartprocure
+# eslint-config-smartprocure [![Push to master](https://github.com/smartprocure/eslint-config-smartprocure/actions/workflows/push-master.yaml/badge.svg)](https://github.com/smartprocure/eslint-config-smartprocure/actions/workflows/push-master.yaml)
 
 > ESLint [shareable config](http://eslint.org/docs/developer-guide/shareable-configs.html) for the SmartProcure JavaScript style guide
 
