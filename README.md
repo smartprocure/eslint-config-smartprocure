@@ -1,4 +1,9 @@
-# eslint-config-smartprocure [![Push to master](https://github.com/smartprocure/eslint-config-smartprocure/actions/workflows/push-master.yaml/badge.svg)](https://github.com/smartprocure/eslint-config-smartprocure/actions/workflows/push-master.yaml)
+# eslint-config-smartprocure [![CI][ci-image]][ci-url] [![npm][npm-image]][npm-url]
+
+[ci-image]: https://github.com/smartprocure/eslint-config-smartprocure/actions/workflows/push-master.yaml/badge.svg
+[ci-url]: https://github.com/smartprocure/eslint-config-smartprocure/actions/workflows/push-master.yaml
+[npm-image]: https://img.shields.io/npm/v/eslint-config-smartprocure.svg
+[npm-url]: https://npmjs.org/package/eslint-config-smartprocure
 
 > ESLint [shareable config](http://eslint.org/docs/developer-guide/shareable-configs.html) for the SmartProcure JavaScript style guide
 
